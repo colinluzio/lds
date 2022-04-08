@@ -12,14 +12,18 @@
   },
   "scripts": {
     "start": "tsdx watch",
-    "build": "tsdx build",
-    "test": "tsdx test --passWithNoTests",
+    "build": "NODE_ENV=production tsdx build",
+    "test": "tsdx test",
+    "test-watch": "tsdx test --watch",
+    "test-coverage": "tsdx test --coverage",
+    "open-coverage": "open-cli coverage/lcov-report/index.html",
     "lint": "tsdx lint",
     "prepare": "tsdx build",
     "size": "size-limit",
     "analyze": "size-limit --why",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "build:css": "postcss ./src/styles/tailwind.css build -o css/tailwind.dist.css --minify"
   },
   "peerDependencies": {
     "react": ">=16"
@@ -58,14 +62,20 @@
     "@storybook/react": "^6.4.20",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
+    "autoprefixer": "^10.4.4",
     "babel-loader": "^8.2.4",
     "husky": "^7.0.4",
+    "postcss-cli": "^9.1.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-is": "^18.0.0",
     "size-limit": "^7.0.8",
+    "tailwindcss": "^3.0.23",
     "tsdx": "^0.14.1",
     "tslib": "^2.3.1",
     "typescript": "^4.6.3"
+  },
+  "dependencies": {
+    "tailwindcss-breakpoints-inscpector": "^1.1.0"
   }
 }
