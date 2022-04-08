@@ -70,7 +70,7 @@ Heading.args = {
 };
 
 Heading.parameters = {
-  controls: { exclude: ["variant", "customColor", "className"] },
+  controls: { exclude: ["variant", "className"] },
 };
 
 const TypographyText: Story<Props> = (args) => {
