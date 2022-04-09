@@ -1,7 +1,7 @@
 import React from "react";
 import { Meta, Story } from "@storybook/react";
 import { FiStar, FiArrowRight } from "react-icons/fi";
-import { Button, ButtonProps, Figma } from "../src";
+import { Button, ButtonProps, Figma } from "../dist";
 import StoryLayout from "./StoryLayout";
 
 const meta: Meta = {
