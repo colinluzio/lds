@@ -1,11 +1,11 @@
 import React from 'react';
 import * as ReactDOM from 'react-dom';
-import { Default as Thing } from '../stories/Thing.stories';
+import { Button } from '../src/Button';
 
-describe('Thing', () => {
+describe('Button', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<Thing />, div);
+    ReactDOM.render(<Button variant='primary' />, div);
     ReactDOM.unmountComponentAtNode(div);
   });
 });
